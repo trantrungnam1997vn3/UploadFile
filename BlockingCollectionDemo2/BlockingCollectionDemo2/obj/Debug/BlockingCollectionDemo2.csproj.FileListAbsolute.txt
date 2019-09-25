@@ -4,3 +4,9 @@ D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\BlockingCollect
 D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\BlockingCollectionDemo2\bin\Debug\BlockingCollectionDemo2.pdb
 D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\BlockingCollectionDemo2\obj\Debug\BlockingCollectionDemo2.exe
 D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\BlockingCollectionDemo2\obj\Debug\BlockingCollectionDemo2.pdb
+D:\Project\ThreadPool\Threadpool\BlockingCollectionDemo2\BlockingCollectionDemo2\bin\Debug\BlockingCollectionDemo2.exe.config
+D:\Project\ThreadPool\Threadpool\BlockingCollectionDemo2\BlockingCollectionDemo2\bin\Debug\BlockingCollectionDemo2.exe
+D:\Project\ThreadPool\Threadpool\BlockingCollectionDemo2\BlockingCollectionDemo2\bin\Debug\BlockingCollectionDemo2.pdb
+D:\Project\ThreadPool\Threadpool\BlockingCollectionDemo2\BlockingCollectionDemo2\obj\Debug\BlockingCollectionDemo2.csprojResolveAssemblyReference.cache
+D:\Project\ThreadPool\Threadpool\BlockingCollectionDemo2\BlockingCollectionDemo2\obj\Debug\BlockingCollectionDemo2.exe
+D:\Project\ThreadPool\Threadpool\BlockingCollectionDemo2\BlockingCollectionDemo2\obj\Debug\BlockingCollectionDemo2.pdb
