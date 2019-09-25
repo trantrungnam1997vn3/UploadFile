@@ -1,0 +1,6 @@
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentBag\bin\Debug\ConcurrentBag.exe.config
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentBag\bin\Debug\ConcurrentBag.exe
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentBag\bin\Debug\ConcurrentBag.pdb
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentBag\obj\Debug\ConcurrentBag.csprojResolveAssemblyReference.cache
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentBag\obj\Debug\ConcurrentBag.exe
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentBag\obj\Debug\ConcurrentBag.pdb

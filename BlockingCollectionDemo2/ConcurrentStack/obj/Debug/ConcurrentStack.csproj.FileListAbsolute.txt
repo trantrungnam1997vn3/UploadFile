@@ -1,0 +1,5 @@
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentStack\bin\Debug\ConcurrentStack.exe.config
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentStack\bin\Debug\ConcurrentStack.exe
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentStack\bin\Debug\ConcurrentStack.pdb
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentStack\obj\Debug\ConcurrentStack.exe
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcurrentStack\obj\Debug\ConcurrentStack.pdb

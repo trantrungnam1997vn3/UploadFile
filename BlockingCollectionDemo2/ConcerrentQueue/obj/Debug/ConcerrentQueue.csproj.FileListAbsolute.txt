@@ -1,0 +1,6 @@
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcerrentQueue\bin\Debug\ConcerrentQueue.exe.config
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcerrentQueue\bin\Debug\ConcerrentQueue.exe
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcerrentQueue\bin\Debug\ConcerrentQueue.pdb
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcerrentQueue\obj\Debug\ConcerrentQueue.csprojResolveAssemblyReference.cache
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcerrentQueue\obj\Debug\ConcerrentQueue.exe
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ConcerrentQueue\obj\Debug\ConcerrentQueue.pdb
