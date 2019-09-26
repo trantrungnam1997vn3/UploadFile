@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Threading.Tasks;
 using ThreadPool.Models;
 
 namespace ThreadPool
@@ -26,7 +27,6 @@ namespace ThreadPool
             Product product = new Product();
             using (var connection = new SqlConnection("{connectionString}"))
             {
-                Product product = new Product();
             }
         }
     }

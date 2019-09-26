@@ -1,0 +1,12 @@
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\bin\Debug\ThreadPool-Ex.exe.config
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\bin\Debug\ThreadPool-Ex.exe
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\bin\Debug\ThreadPool-Ex.pdb
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\bin\Debug\EntityFramework.dll
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\bin\Debug\EntityFramework.SqlServer.dll
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\bin\Debug\EntityFramework.xml
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\bin\Debug\EntityFramework.SqlServer.xml
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\obj\Debug\ThreadPool-Ex.csprojResolveAssemblyReference.cache
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\obj\Debug\ThreadPool-Ex.exe
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\obj\Debug\ThreadPool-Ex.pdb
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\obj\Debug\ThreadPool_Ex.Migrations.Initial.resources
+D:\ThreadExample\BlockingCollectionDemo2\BlockingCollectionDemo2\ThreadPool-Ex\obj\Debug\ThreadPool-Ex.csproj.GenerateResource.Cache
