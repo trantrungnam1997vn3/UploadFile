@@ -20,15 +20,16 @@ namespace ThreadPool_Ex
             stopwatch1.Stop();
             Console.WriteLine("Comsuming time without BlockingCollection: {0}", stopwatch1.Elapsed);
 
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            AddTakeDemo.BC_AddTakeCompleteAdding();
-            stopwatch.Stop();
-            Console.WriteLine("Comsuming time with BlockingCollection non bound: {0}", stopwatch.Elapsed);
+            //Stopwatch stopwatch = new Stopwatch();
+            //stopwatch.Start();
+            //AddTakeDemo.BC_AddTakeCompleteAdding();
+            //stopwatch.Stop();
+            //Console.WriteLine("Comsuming time with BlockingCollection non bound: {0}", stopwatch.Elapsed);
 
             Stopwatch stopwatch2 = new Stopwatch();
             stopwatch2.Start();
-            FromToAnyDemo.BC_FromToAny();
+            FromToAnyDemo.BC_FromToAny().GetAwaiter().GetResult();
+            Console.WriteLine("Done");
             stopwatch2.Stop();
             Console.WriteLine("Comsuming time with BlockingCollection with 10 worker: {0}", stopwatch2.Elapsed);
 
@@ -78,7 +79,8 @@ namespace ThreadPool_Ex
                             bc.Add(connection.SaveChanges());
                         }
                         bc.CompleteAdding();
-                    }))
+                    }
+                    ))
                     {
                         // Spin up a Task to consume the BlockingCollection
                         using (Task t2 = Task.Run(() =>
@@ -96,6 +98,45 @@ namespace ThreadPool_Ex
                         }))
                         {
                             await Task.WhenAll(t1, t2);
+                        }
+                    }
+                }
+            }
+        }
+        public static async Task BC_AddTakeCompleteAddingTest()
+        {
+            using (BlockingCollection<int> bc = new BlockingCollection<int>())
+            {
+                // Spin up a Task to populate the BlockingCollection
+                using (var connection = new ProductContext())
+                {
+                    for (int i = 0; i < 100; i++)
+                    {
+                        using (Task t1 = Task.Run(() =>
+                        {
+                            var product = new Product { Id = i, Name = String.Format("Nam{0}", i) };
+                            connection.Products.Add(product);
+                            bc.Add(connection.SaveChanges());
+                            bc.CompleteAdding();
+                        }))
+                        {
+                            // Spin up a Task to consume the BlockingCollection
+                            using (Task t2 = Task.Run(() =>
+                            {
+                                try
+                                {
+                                    // Consume consume the BlockingCollection
+                                    while (true) bc.Take();
+                                }
+                                catch (InvalidOperationException)
+                                {
+                                    // An InvalidOperationException means that Take() was called on a completed collection
+                                    Console.WriteLine("That's All!");
+                                }
+                            }))
+                            {
+                                await Task.WhenAll(t1, t2);
+                            }
                         }
                     }
                 }
@@ -145,7 +186,7 @@ namespace ThreadPool_Ex
         //      Bounded BlockingCollection<T>
         //      BlockingCollection<T>.TryAddToAny()
         //      BlockingCollection<T>.TryTakeFromAny()
-        public static void BC_FromToAny()
+        public static async Task BC_FromToAny()
         {
             BlockingCollection<int>[] bcs = new BlockingCollection<int>[2];
             bcs[0] = new BlockingCollection<int>(5); // collection bounded to 5 items
@@ -153,24 +194,35 @@ namespace ThreadPool_Ex
 
             using (var connection = new ProductContext())
             {
-
                 int numFailures = 0;
+
                 for (int i = 0; i < 100; i++)
                 {
-                    var product = new Product { Id = i, Name = String.Format("Nam{0}", i) };
-                    connection.Products.Add(product);
+                    using (Task t1 = Task.Run(() =>
+                    {
+                        var product = new Product { Id = i, Name = String.Format("Nam{0}", i) };
+                        connection.Products.Add(product);
 
-                    // Should be able to add 10 items w/o blocking
-                    if (BlockingCollection<int>.TryAddToAny(bcs, connection.SaveChanges()) == -1) numFailures++;
-
-                    Console.WriteLine("TryAddToAny: {0} failures (should be 0)", numFailures);
-
-                    // Should be able to retrieve 10 items
-                    int numItems = 0;
-                    int item;
-                    while (BlockingCollection<int>.TryTakeFromAny(bcs, out item) != -1) numItems++;
-                    Console.WriteLine("TryTakeFromAny: retrieved {0} items (should be 10)", numItems);
+                        // Should be able to add 10 items w/o blocking
+                        if (BlockingCollection<int>.TryAddToAny(bcs, connection.SaveChanges()) == -1) numFailures++;
+                    }))
+                    {
+                        using (Task t2 = Task.Run(() =>
+                            {
+                                Console.WriteLine("TryAddToAny: {0} failures (should be 0)", numFailures);
+                                    // Should be able to retrieve 10 items
+                                    int numItems = 0;
+                                int item;
+                                while (BlockingCollection<int>.TryTakeFromAny(bcs, out item) != -1) numItems++;
+                                Console.WriteLine("TryTakeFromAny: retrieved {0} items (should be 10)", numItems);
+                            })
+                        )
+                        {
+                            await Task.WhenAll(t1, t2);
+                        }
+                    }
                 }
+                //}
             }
         }
     }
